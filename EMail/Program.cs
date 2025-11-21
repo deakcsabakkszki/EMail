@@ -2,11 +2,12 @@
 {
     internal class Program
     {
-        //adatszerkezet
+
         
 
         static void Main(string[] args)
-        {
+        {   
+            //adatszerkezet
             List<String> e_mailok = new List<String>();
             e_mailok.Add("alma1@kört.hu");
             e_mailok.Add("alma2.dfdfdf.hu");
@@ -25,7 +26,15 @@
                 string valasztas=Console.ReadLine();
                 switch (valasztas) {
                     case "0" : return;
-                    case "1" : Console.WriteLine("e-mailek listázása"); break;
+                    case "1" :
+                        Console.Clear(); 
+                        Console.WriteLine("e-mail címet:");
+                        int sorszam = 0;
+                        foreach (String e_mail in e_mailok)
+                        {
+                            Console.WriteLine($"{sorszam++} {e_mail}");
+                        }
+                        break;
                     case "2" : Console.WriteLine("új e-mailek"); break;
                     case "3" : Console.WriteLine("e-mail törlés"); break;
                     case "4" : Console.WriteLine("évényesek listázás"); break;
