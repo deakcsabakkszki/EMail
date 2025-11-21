@@ -41,7 +41,11 @@
                         String uj = Console.ReadLine();
                         e_mailok.Add(uj);
                         break;
-                    case "3" : Console.WriteLine("e-mail törlés"); break;
+                    case "3" : 
+                        Console.Write("Adja meg a törlendő e-mail azonosítojat:");
+                        int index = Convert.ToInt32(Console.ReadLine());
+                        e_mailok.RemoveAt(index);
+                        break;
                     case "4" : Console.WriteLine("évényesek listázás"); break;
                     default : Console.Clear(); Console.WriteLine("rossz parancs");break;
                 }
