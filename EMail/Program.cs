@@ -35,7 +35,12 @@
                             Console.WriteLine($"{sorszam++} {e_mail}");
                         }
                         break;
-                    case "2" : Console.WriteLine("új e-mailek"); break;
+                    case "2" :
+                        Console.Clear();
+                        Console.Write("Adja meg az új e-mailcímet:"); 
+                        String uj = Console.ReadLine();
+                        e_mailok.Add(uj);
+                        break;
                     case "3" : Console.WriteLine("e-mail törlés"); break;
                     case "4" : Console.WriteLine("évényesek listázás"); break;
                     default : Console.Clear(); Console.WriteLine("rossz parancs");break;
