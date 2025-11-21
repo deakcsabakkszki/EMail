@@ -2,8 +2,17 @@
 {
     internal class Program
     {
+        //adatszerkezet
+        
+
         static void Main(string[] args)
         {
+            List<String> e_mailok = new List<String>();
+            e_mailok.Add("alma1@kört.hu");
+            e_mailok.Add("alma2.dfdfdf.hu");
+            e_mailok.Add("alma3@ssdsds.hu");
+            e_mailok.Add("deak.csaba@kkszki.hu");
+            e_mailok.Add("alma.korte@alma.hu");
             //menüvezérlés
             while (true) {
                 Console.Clear();
